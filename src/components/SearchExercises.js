@@ -1,7 +1,17 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
+import Exercises from './Exercises';
 
-const SearchExercises = () => {
+ export default function SearchExercises() {
+  const [search, setSearch] = useState('');
+
+  const handleSearch = async () => {
+     if(search) {
+    //     const exercisesData = await fetchData();
+     }
+  }
+
+
   return (
     <div>
         <Stack 
@@ -35,16 +45,30 @@ const SearchExercises = () => {
                       backgroundColor: 'grey', 
                       borderRadius: '40px' 
                     }}
-                  type={'text'}
+                  type='text'
                   placeholder={'Exercises'}
-                  value={''}
-                  onchange= {(e) => {}}
+                  value={search}
+                  onchange= {(e) => setSearch(e.target.value.toLowerCase)}
                   height={'76px'}
                 /> 
+                <Button className="search-btn" 
+                sx={{ 
+                     bgcolor: '#FF2625', 
+                     color: '#fff', 
+                     textTransform: 'none', 
+                     width: { lg: '173px', xs: '80px' }, 
+                     height: '56px', 
+                     position: 'absolute', 
+                     right: '0px', 
+                     fontSize: { lg: '20px', xs: '14px' } 
+                   }}
+                   onClick={handleSearch}
+                  >
+                  Search
+                </Button>
             </Box>    
         </Stack>
     </div>
   )
 }
 
-export default SearchExercises; 
