@@ -1,8 +1,24 @@
- export const ExerciseOptions =  {
+//  export const exerciseOptions = {
+//   method: 'GET',
+//   url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
+//   headers: {
+//     'X-RapidAPI-Key': process.env.REACT_API_KEY,
+//     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+//   }
+//  }
+
+//   method: 'GET',
+//   headers: {
+//     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
+//     'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+//   },
+// 
+
+export const exerciseOptions = {
   method: 'GET',
-  url: 'https://exercisedb.p.rapidapi.com/exercises/target/%7Btarget%7D',
+  url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
   headers: {
-    'X-RapidAPI-Key': ,
+    'X-RapidAPI-Key': '238a5366d1msh51d816c26915a15p15245ajsnbdd7be0544a8',
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
   }
 };

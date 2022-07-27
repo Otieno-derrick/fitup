@@ -1,13 +1,15 @@
 import React,{useEffect, useState} from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
-import Exercises from './Exercises';
+import { exerciseOptions, fetchData } from '../fetch-staffs/fetchData';
+
 
  export default function SearchExercises() {
   const [search, setSearch] = useState('');
 
   const handleSearch = async () => {
      if(search) {
-    //     const exercisesData = await fetchData();
+         const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+         console.log(exercisesData);
      }
   }
 
@@ -48,7 +50,7 @@ import Exercises from './Exercises';
                   type='text'
                   placeholder={'Exercises'}
                   value={search}
-                  onchange= {(e) => setSearch(e.target.value.toLowerCase)}
+                  onChange= {(e) => setSearch(e.target.value.toLowerCase())}
                   height={'76px'}
                 /> 
                 <Button className="search-btn" 
@@ -72,3 +74,4 @@ import Exercises from './Exercises';
   )
 }
 
+ 
