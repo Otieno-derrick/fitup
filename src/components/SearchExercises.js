@@ -47,4 +47,4 @@ const SearchExercises = () => {
   )
 }
 
-export default SearchExercises 
+export default SearchExercises; 
