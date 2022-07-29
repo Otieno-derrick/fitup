@@ -8,6 +8,9 @@ import ScrollBar from './ScrollBar';
 
 
 export default function SearchExercises({setExercises, bodyPart, setBodyPart }) {
+  const [search, setSearch] = useState('');
+   const [bodyParts, setBodyParts] = useState([]);
+   
 
  
 
