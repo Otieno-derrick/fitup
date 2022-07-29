@@ -4,9 +4,9 @@ import {Route, Routes} from "react-router-dom";
 import {Box} from "@mui/material";
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import ExerciseDetails from './components/ExerciseDetails';
+import Home from './page/Home';
 import Login from './components/Login';
+import ExerciseDetails from './page/ExerciseDetails';
 
 
 
